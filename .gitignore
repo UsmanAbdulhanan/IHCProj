@@ -1,0 +1,12 @@
+*.pth
+.idea/
+__pycache__/
+.DS_Store
+*.png
+*.npz
+*.jpg
+*.jpeg
+*.json
+*.csv
+*.log
+y

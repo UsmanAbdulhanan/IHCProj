@@ -1,0 +1,19 @@
+name: virtualmultiplexer
+channels:
+  - conda-forge
+dependencies:
+  - bzip2=1.0.8
+  - ca-certificates
+  - libffi
+  - ncurses=6.4
+  - openssl
+  - pip=23.2.1
+  - python=3.11.5
+  - readline=8.2
+  - setuptools=68.0.0
+  - sqlite=
+  - tk=8.6.12
+  - wheel=0.41.2
+  - xz
+  - zlib=1.2.13
+  

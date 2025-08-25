@@ -1,0 +1,58 @@
+# patch feature extractor
+feature_extractor: resnet50
+
+# fraction of markers to drop during training, useuful for multimodality with virtual data
+marker_dropout: 0
+
+# enable weighted sampling
+weighted_sample: True
+
+### Model parameters
+# node embedding dimension
+embed_dim: 32
+# choices=['none', 'late', 'early']
+fusion_type: 'none'
+# type of aggregators for feature fusion, useful for late_fusion', choices=['transformer', 'concat']
+aggregator_type: 'transformer'
+# number of hidden layers in classification_gt head. useful for LATE fusion with CONCAT
+aggregator_depth: 2
+
+### GCN parameters
+# GCN batch norm
+batch_norm: True
+# GCN node self-loop
+add_self: True
+# GCN node Lp normalization
+normalize_embedding: True
+# GCN node embedding dropout
+dropout: 0.
+# GCN node embedding relu
+relu: True
+# GCN node embedding bias
+bias: True
+# number of clusters to project the nodes
+num_node_cluster: 100
+
+### ViT parameters
+# number of ViT multi-head attention
+num_heads: 8
+# number of ViT blocks
+depth: 3
+# value of ViT MLP hidden dim scaling
+mlp_ratio: 2.
+# # ViT bias param in MHA
+qkv_bias: False
+# value of ViT projection head dropout
+proj_drop_rate: 0.
+# value of ViT dropout in attention
+attn_drop_rate: 0.
+
+### Training params
+num_epochs: 500
+batch_size: 4
+num_workers: 2
+optimizer: 'Adam'
+lr: 0.0001
+scheduler: 'CosineAnnealing'
+is_load_ram: True
+val_freq: 1
