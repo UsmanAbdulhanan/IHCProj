@@ -1,0 +1,81 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+         {
+            "name": "Python Debugger: main_skin",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "bin.main_skin",
+            "console": "integratedTerminal",
+            "python": "y/envs/env/bin/python",
+            "args": [
+                "--base_path", "./data",
+                "--config_path", "configs/i2i_config.yml",
+                "--src_marker", "HE",
+                "--dst_marker", "NKX3",
+                "--is_test", "True"
+            ]
+        },
+        {
+            "name": "Python Debugger: main(reversed)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "bin.main",
+            "console": "integratedTerminal",
+            "python": "y/envs/env/bin/python",
+            "args": [
+                "--base_path", "./data",
+                "--config_path", "configs/i2i_config.yml",
+                "--src_marker", "NKX3",
+                "--dst_marker", "HE",
+                "--is_train", "True"
+            ]
+        },
+         {
+            "name": "Python Debugger: main( test reversed)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "bin.main",
+            "console": "integratedTerminal",
+            "python": "y/envs/env/bin/python",
+            "args": [
+                "--base_path", "./data",
+                "--config_path", "configs/i2i_config.yml",
+                "--src_marker", "NKX3",
+                "--dst_marker", "HE",
+                "--is_test", "True"
+            ]
+        },
+         {
+            "name": "Python Debugger: main(test)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "bin.main",
+            "console": "integratedTerminal",
+            "python": "y/envs/env/bin/python",
+            "args": [
+                "--base_path", "./data",
+                "--config_path", "configs/i2i_config.yml",
+                "--src_marker", "HE",
+                "--dst_marker", "NKX3",
+                "--is_test", "True"
+            ]
+        },
+    
+        {
+            "name": "Python Debugger: main(train)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "bin.main",
+            "console": "integratedTerminal",
+            "python": "y/envs/env/bin/python",
+            "args": [
+                "--base_path", "./data",
+                "--config_path", "configs/i2i_config.yml",
+                "--src_marker", "HE",
+                "--dst_marker", "NKX3",
+                "--is_train", "True"
+            ]
+        }
+    ]
+}
